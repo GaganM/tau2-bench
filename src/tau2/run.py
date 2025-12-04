@@ -8,14 +8,8 @@ from typing import Optional
 from loguru import logger
 
 from tau2.agent.llm_agent import LLMAgent, LLMGTAgent, LLMSoloAgent
-from tau2.data_model.simulation import (
-    AgentInfo,
-    Info,
-    Results,
-    RunConfig,
-    SimulationRun,
-    UserInfo,
-)
+from tau2.data_model.simulation import (AgentInfo, Info, Results, RunConfig,
+                                        SimulationRun, UserInfo)
 from tau2.data_model.tasks import Task
 from tau2.environment.environment import Environment, EnvironmentInfo
 from tau2.evaluator.evaluator import EvaluationType, evaluate_simulation
@@ -24,6 +18,7 @@ from tau2.metrics.agent_metrics import compute_metrics
 from tau2.orchestrator.orchestrator import Orchestrator
 from tau2.registry import RegistryInfo, registry
 from tau2.user.user_simulator import DummyUser, get_global_user_sim_guidelines
+from tau2.utils.display import ConsoleDisplay, Text
 from tau2.utils.display import ConsoleDisplay, Text
 from tau2.utils.pydantic_utils import get_pydantic_hash
 from tau2.utils.utils import DATA_DIR, get_commit_hash, get_now, show_dict_diff
